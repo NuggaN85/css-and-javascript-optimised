@@ -17,7 +17,7 @@
 // Inclure le speed-up.php la racine de votre siteweb.
 ```
 ```
-// Une fois sais 3 chose la mis en place faite http://exemple.com/speed-up.php si cela fonction vous devriez avoir 
+// Une fois sais 3 chose la mis en place faite http://exemple.com/speed-up.php si cela fonctionne vous devriez avoir 
 done in css et donne in javascript
 ```
 
