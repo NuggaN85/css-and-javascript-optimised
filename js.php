@@ -22,7 +22,7 @@ foreach($jsFiles as $jsFile){
 <body>
   <center>
     <br /><br /><br /><br /><br />
-    <h1>Done in javascript!</h1>
+    <h1>Terminé.</h1>
   </center>
 </body>
 </html>
