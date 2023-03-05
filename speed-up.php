@@ -1,22 +1,27 @@
-<HTML>
-  <HEAD>
-     <script type="text/javascript">
-        loadSites();
-        function loadSites(){
-           setTimeout("seite2()",1);
-        }
-        function seite2(){
-           parent.info.location.href = "css/css.php";
-           setTimeout("seite3()",4500);
-        }
+<html>
+  <head>
+    <script>
+      function loadSites() {
+        setTimeout(() => {
+          seite2();
+        }, 1);
+      }
       
-       function seite3(){
-           parent.info.location.href = "js/js.php";
-        }
+      function seite2() {
+        parent.info.location.href = "css/css.php";
+        setTimeout(() => {
+          seite3();
+        }, 4500);
+      }
       
-     </script>
-  </HEAD>
-  <frameset cols=100%>
-     <frame src="about:blank" name="info">
-  </frameset>
-</HTML>
+      function seite3() {
+        parent.info.location.href = "js/js.php";
+      }
+      
+      window.onload = loadSites;
+    </script>
+  </head>
+  <body>
+    <div id="info"></div>
+  </body>
+</html>
