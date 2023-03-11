@@ -8,13 +8,9 @@
 
 
 ```
-// Inclure le css.php dans votre dossier css a la racine.
-```
-```
-// Inclure le js.php dans votre dossier js a la racine.
-```
-```
-// Inclure le speed-up.php la racine de votre siteweb.
+1. Inclure le css.php dans votre dossier css a la racine.
+2. Inclure le js.php dans votre dossier js a la racine.
+3. Inclure le speed-up.php la racine de votre siteweb.
 ```
 
 Une fois que vous avez effectué trois étapes pour la configuration, rendez-vous sur http://exemple.com/speed-up.php. Si tout fonctionne correctement, vous devriez constater une amélioration de la vitesse grâce à la mise en cache des fichiers CSS et JavaScript.
