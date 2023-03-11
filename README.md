@@ -16,10 +16,8 @@
 ```
 // Inclure le speed-up.php la racine de votre siteweb.
 ```
-```
-// Une fois sais 3 chose la mis en place faite http://exemple.com/speed-up.php si cela fonctionne vous devriez avoir 
-done in css et donne in javascript
-```
+
+Une fois que vous avez effectué trois étapes pour la configuration, rendez-vous sur http://exemple.com/speed-up.php. Si tout fonctionne correctement, vous devriez constater une amélioration de la vitesse grâce à la mise en cache des fichiers CSS et JavaScript.
 
 ## Contribuer
 
