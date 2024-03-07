@@ -1,14 +1,16 @@
 <?php 
 $jsFiles = glob('*.js');
+
 foreach ($jsFiles as $jsFile) {
-  if (is_file($jsFile)) {  // Vérifier si le chemin est bien un fichier
+  if (is_file($jsFile)) {
     $basename = basename($jsFile);
     $gzname = $basename . '.gz';
-    $fileContent = file_get_contents($basename);
+    $fileContent = file_get_contents($jsFile);  // Utiliser $jsFile au lieu de $basename
 
-    if ($fileContent !== false) {  // Vérifier si la lecture du fichier a réussi
+    if ($fileContent !== false) {
       $compressedContent = gzencode($fileContent, 9);
-      if ($compressedContent !== false) {  // Vérifier si la compression a réussi
+      
+      if ($compressedContent !== false) {
         file_put_contents($gzname, $compressedContent);
       } else {
         echo "Échec de la compression du fichier $basename.";
@@ -25,10 +27,10 @@ foreach ($jsFiles as $jsFile) {
 <head>
   <style>
     h1 {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;  // Ajouter des guillemets autour de 'Arial'
       font-size: 30px;
       font-weight: bold;
-      color: #006400;
+      color: #006400;  // Modifier la couleur à la valeur hexadécimale appropriée
     }
   </style>
 </head>
