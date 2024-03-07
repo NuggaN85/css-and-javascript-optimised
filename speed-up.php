@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <script>
     function loadSites() {
@@ -7,12 +7,20 @@
     }
     
     function seite2() {
-      parent.info.location.href = "css/css.php";
-      setTimeout(seite3, 4500);
+      try {
+        parent.info.location.href = "css/css.php";
+        setTimeout(seite3, 4500);
+      } catch (error) {
+        console.error("Erreur lors du chargement de la page CSS :", error.message);
+      }
     }
     
     function seite3() {
-      parent.info.location.href = "js/js.php";
+      try {
+        parent.info.location.href = "js/js.php";
+      } catch (error) {
+        console.error("Erreur lors du chargement de la page JavaScript :", error.message);
+      }
     }
     
     window.onload = loadSites;
