@@ -1,14 +1,16 @@
 <?php 
 $cssFiles = glob('*.css');
+
 foreach ($cssFiles as $cssFile) {
-  if (is_file($cssFile)) {  // Vérifier si le chemin est bien un fichier
+  if (is_file($cssFile)) {
     $basename = basename($cssFile);
     $gzname = $basename . '.gz';
-    $fileContent = file_get_contents($basename);
+    $fileContent = file_get_contents($cssFile);  // Utiliser $cssFile au lieu de $basename
 
-    if ($fileContent !== false) {  // Vérifier si la lecture du fichier a réussi
+    if ($fileContent !== false) {
       $compressedContent = gzencode($fileContent, 9);
-      if ($compressedContent !== false) {  // Vérifier si la compression a réussi
+      
+      if ($compressedContent !== false) {
         file_put_contents($gzname, $compressedContent);
       } else {
         echo "Échec de la compression du fichier $basename.";
@@ -25,7 +27,7 @@ foreach ($cssFiles as $cssFile) {
 <head>
   <style>
     h1 {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;  // Ajouter des guillemets autour de 'Arial'
       font-size: 30px;
       font-weight: bold;
       color: #FFA500;
